@@ -3,6 +3,25 @@
 }
 /*-- Document Styles --*/
 
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-gap:1em;
+}
+
+.card{
+  border:1px solid red;
+  padding:1em;
+}
+
+.thumb{
+  background-image: url('https://picsum.photos/200/300');
+  background-size: cover;
+  background-position:center center;
+  padding-bottom: 56%;
+}
+
 body{
   padding:2em;
   font-size: 2em;
