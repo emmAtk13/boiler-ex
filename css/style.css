@@ -12,7 +12,7 @@
 
 .card{
   border:1px solid red;
-  padding:1em;
+  padding:.5em;
 }
 
 .thumb{
@@ -22,6 +22,36 @@
   padding-bottom: 56%;
 }
 
+.one{
+  background-image: url('https://picsum.photos/6858/4574?image=1080');
+}
+
+.two{
+  background-image: url('https://picsum.photos/7117/4090?image=1068');
+}
+
+.three{
+  background-image: url('https://picsum.photos/5092/3395?image=1062');
+}
+
+.four{
+  background-image: url('https://picsum.photos/6000/3376?image=1022');
+}
+
+@media screen and (max-width: 1250px) {
+  .gallery{grid-template-columns: repeat(3,1fr);}
+}
+
+@media screen and (max-width: 960px) {
+  .gallery{grid-template-columns: repeat(2,1fr);}
+}
+
+@media screen and (max-width: 600px) {
+  .gallery{grid-template-columns: 1fr;}
+}
+
+
+/*--
 body{
   padding:2em;
   font-size: 2em;
@@ -40,3 +70,4 @@ p{
 .red{
   color:red;
 }
+--*/
