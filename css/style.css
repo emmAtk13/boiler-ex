@@ -1,0 +1,23 @@
+/*-- Global Styles --*/
+:root {
+}
+/*-- Document Styles --*/
+
+body{
+  padding:2em;
+  font-size: 2em;
+}
+
+p{
+  border: 1px solid red;
+  padding: 1em;
+  border-radius:4px;
+}
+
+.blue{
+  color:blue;
+}
+
+.red{
+  color:red;
+}
