@@ -1,8 +1,45 @@
 /*-- Global Styles --*/
 :root {
+  --prime: #124559;
+  --text: #001011 ;
+  --rev-text: #9F9AA4;
+  --accent-one: #DB5461;
+  --accent-two: #64E9EE;
+  --bg: #FFFBFC;
 }
 /*-- Document Styles --*/
 
+body{
+  padding: .25em;
+  font-size: 16px;
+  color: var(--text);
+  background-color: var(--prime);
+}
+
+.topnav{
+  margin-top: -.3em;
+  padding-bottom: .5em;
+  background-color: var(--accent-one);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items: stretch;
+  align-content: center;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
+a.nav-item{
+  position: relative;
+  text-align: center;
+  color: var(--rev-text);
+  margin: auto 0;
+}
+
+.label{
+  font-size: 1rem;
+}
 
 .gallery{
   display:grid;
