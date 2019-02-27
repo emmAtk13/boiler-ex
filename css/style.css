@@ -21,7 +21,7 @@ body{
   padding-bottom: .5em;
   background-color: var(--accent-one);
   display:flex;
-  flex-direction:column;
+  flex-direction:row;
   justify-content:space-around;
   align-items: stretch;
   align-content: center;
@@ -32,9 +32,22 @@ body{
 
 a.nav-item{
   position: relative;
+  top: 4px;
   text-align: center;
+  padding: .7em;
   color: var(--rev-text);
   margin: auto 0;
+}
+
+a.nav-item:hover{
+  color: var(--accent-two);
+  cursor: pointer;
+}
+
+.nav-item.trigram{
+  display: none;
+  text-decoration: none;
+  font-size: 2em;
 }
 
 .label{
@@ -42,6 +55,7 @@ a.nav-item{
 }
 
 .gallery{
+  padding: .5em;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   grid-gap:1em;
@@ -50,6 +64,7 @@ a.nav-item{
 .card{
   border:1px solid red;
   padding:.5em;
+  border-radius: 4px;
 }
 
 .thumb{
