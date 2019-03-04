@@ -1,11 +1,11 @@
 /*-- Global Styles --*/
 :root {
   --prime: #124559;
-  --text: #001011 ;
-  --rev-text: #9F9AA4;
-  --accent-one: #DB5461;
-  --accent-two: #64E9EE;
-  --bg: #FFFBFC;
+  --text: #0C0C0C;
+  --rev-text: #5C5B5B;
+  --accent-one: #CB4D4E;
+  --accent-two: #433D50;
+  --bg: #D5D2CE;
 }
 /*-- Document Styles --*/
 
@@ -21,8 +21,8 @@ body{
   padding-bottom: .5em;
   background-color: var(--accent-one);
   display:flex;
-  flex-direction:row;
-  justify-content:space-around;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: stretch;
   align-content: center;
   position: fixed;
@@ -35,12 +35,13 @@ a.nav-item{
   top: 4px;
   text-align: center;
   padding: .7em;
-  color: var(--rev-text);
+  margin: auto 0;
+  color: var(--text);
   margin: auto 0;
 }
 
 a.nav-item:hover{
-  color: var(--accent-two);
+  color: var(--rev-text);
   cursor: pointer;
 }
 
@@ -54,6 +55,25 @@ a.nav-item:hover{
   font-size: 1rem;
 }
 
+@media screen and (max-width: 767px){
+  .topnav a, .topnav span{display:none;}
+  .topnav a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: .25em; background:var(--prime);}
+}
+
+@media screen and (max-width: 767px){
+  .topnav.responsive {align-items: center;} /*-- vertically centers--*/
+  .topnav.responsive a, .topnav.responsive span {display:inherit;} /*-- makes trigram visible --*/
+  .topnav.responsive a:first-child {margin-top:1em;} /*-- adds space above first item --*/
+  .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;} /*-- makes items visible (but not the trigram) and adds space above them--*/
+  .topnav.responsive a.more {margin-bottom: 1em;} /*-- adds margin below bottom item --*/
+  .topnav.responsive a.trigram {visibility:hidden; transition:none;} /*-- hides trigram when open --*/
+  .topnav.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;} /*-- replaces trigram sign with x-sign on mobile. --*/
+}
+
+@media screen and (min-width: 768px) {
+  .topnav {display: flex; flex-direction: row; justify-content: space-around;}
+}
+
 .gallery{
   padding: .5em;
   display:grid;
@@ -62,15 +82,16 @@ a.nav-item:hover{
 }
 
 .card{
+  background-color: var(--rev-text);
   padding:.5em;
   border-radius: 4px;
 }
 
 .thumb{
-  background-image: url('https://picsum.photos/200/300');
   background-size: cover;
   background-position:center center;
   padding-bottom: 56%;
+  border-radius: 4px 4px 0 0;
 }
 
 .one{  background-image: url('https://picsum.photos/6858/4574?image=1080');}
@@ -90,7 +111,7 @@ a.nav-item:hover{
   padding: 0 .5em .7em .5em;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 }
 
 .card-title{
@@ -102,6 +123,25 @@ a.nav-item:hover{
 .card-text{
   font-size: .8em;
   align-self:flex-start;
+}
+
+button.card-more {
+  background: transparent;
+  padding: .45em .7em .4em .7em;
+  border-radius: 200px;
+  font-size: .7em;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+button.card-more, button.card-more:visited {
+  color: var(--prime);
+  border: 1.5px solid var(--prime);
+  transition: all 250ms ease-in-out;
+}
+button.card-more:hover, button.card-more:active {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 @media screen and (max-width: 1250px) {
