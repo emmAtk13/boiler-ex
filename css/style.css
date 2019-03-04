@@ -13,7 +13,7 @@ body{
   padding: .25em;
   font-size: 16px;
   color: var(--text);
-  background-color: var(--prime);
+  background-color: var(--bg);
 }
 
 .topnav{
@@ -62,7 +62,6 @@ a.nav-item:hover{
 }
 
 .card{
-  border:1px solid red;
   padding:.5em;
   border-radius: 4px;
 }
@@ -74,20 +73,35 @@ a.nav-item:hover{
   padding-bottom: 56%;
 }
 
-.one{
-  background-image: url('https://picsum.photos/6858/4574?image=1080');
+.one{  background-image: url('https://picsum.photos/6858/4574?image=1080');}
+.two{  background-image: url('https://picsum.photos/7117/4090?image=1068');}
+.three{  background-image: url('https://picsum.photos/5092/3395?image=1062');}
+.four{  background-image: url('https://picsum.photos/6000/3376?image=1022');}
+.five{  background-image: url('https://picsum.photos/3079/1733?image=1054');}
+.six{  background-image: url('https://picsum.photos/4312/2868?image=1002');}
+.seven{  background-image: url('https://picsum.photos/4000/2667?image=999');}
+.eight{  background-image: url('https://picsum.photos/5032/2920?image=976');}
+.nine{  background-image: url('https://picsum.photos/5184/3456?image=971');}
+.ten{  background-image: url('https://picsum.photos/4928/3280?image=967');}
+.eleven{  background-image: url('https://picsum.photos/5184/2916?image=888');}
+.twelve{  background-image: url('https://picsum.photos/3000/4542?image=940');}
+
+.card-content {
+  padding: 0 .5em .7em .5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
-.two{
-  background-image: url('https://picsum.photos/7117/4090?image=1068');
+.card-title{
+  font-size: 1.2em;
+  text-transform: uppercase;
+  align-self: flex-start;
 }
 
-.three{
-  background-image: url('https://picsum.photos/5092/3395?image=1062');
-}
-
-.four{
-  background-image: url('https://picsum.photos/6000/3376?image=1022');
+.card-text{
+  font-size: .8em;
+  align-self:flex-start;
 }
 
 @media screen and (max-width: 1250px) {
