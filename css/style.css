@@ -2,11 +2,13 @@
 :root {
   --prime: #124559;
   --text: #0C0C0C;
-  --rev-text: #5C5B5B;
+  --rev-text: #EBEBEB;
   --accent-one: #CB4D4E;
   --accent-two: #433D50;
-  --bg: #D5D2CE;
+  --bg: #EBEBEB;
 }
+
+/*--font-family: 'Montserrat', sans-serif;--*/
 /*-- Document Styles --*/
 
 body{
@@ -14,6 +16,7 @@ body{
   font-size: 16px;
   color: var(--text);
   background-color: var(--bg);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .topnav{
@@ -51,13 +54,17 @@ a.nav-item:hover{
   font-size: 2em;
 }
 
+i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
+  padding: 0 .33em;
+}
+
 .label{
   font-size: 1rem;
 }
 
 @media screen and (max-width: 767px){
   .topnav a, .topnav span{display:none;}
-  .topnav a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: .25em; background:var(--prime);}
+  .topnav a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: .25em; background:var(--accent-one);}
 }
 
 @media screen and (max-width: 767px){
@@ -78,7 +85,8 @@ a.nav-item:hover{
   padding: 1em;
   background-color: var(--text);
   width: 100%;
-  margin-top: 2em;
+  margin-top: 2.5em;
+  margin-bottom: 2em;
 }
 
 .slideshow-container{
@@ -115,7 +123,8 @@ a.nav-item:hover{
 }
 
 .text {
-  color: var(--text);
+  background: rgba(0,0,0,0.4);
+  color: var(--rev-text);
   font-size: 16px;
   padding: 8px 12px;
   position: absolute;
@@ -167,6 +176,7 @@ a.nav-item:hover{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   grid-gap:1em;
+  margin-bottom: 2em;
 }
 
 .card{
@@ -316,6 +326,19 @@ button.card-more:hover, button.card-more:active {
 
 @media screen and (max-width: 600px) {
   .gallery{grid-template-columns: 1fr;}
+}
+
+footer {
+  background-color: var(--accent-one);
+  padding: .25rem;
+  color: var(--rev-text);
+  text-align: center;
+}
+footer a {
+  color: var(--rev-text);
+}
+footer a:hover {
+  color: var(--prime);
 }
 
 
